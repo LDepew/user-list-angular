@@ -11,7 +11,7 @@ export class UserService {
   baseurl: string = "http://localhost:8080/api/users/";
 
   constructor(
-    private http: HttpClient;
+    private http: HttpClient
   ) { }
 
   list(): Observable<User[]> {
@@ -26,3 +26,9 @@ export class UserService {
     return this.http.post(`${this.baseurl}`, user) as Observable<User>;
   }
 
+  change(user: User): Observable<User> {
+    return this.http.put(`${this.baseurl}/${user.id}`, user) as Observable<User>;
+  }
+
+
+}

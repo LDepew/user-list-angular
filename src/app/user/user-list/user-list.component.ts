@@ -20,7 +20,8 @@ export class UserListComponent implements OnInit {
       users => {
         console.log("Users:", users)
         this.users = users;
-      }
+      },
+      err => { console.error(err); }
     );
   }
 

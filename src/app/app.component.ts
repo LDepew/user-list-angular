@@ -15,6 +15,6 @@ private usrsvc: UserService
 ){
 this.usrsvc.list().subscribe(
 users => {console.log(users); this.users = users; }
-err=> { console.error(err);
+err => { console.error(err);
 };
 }

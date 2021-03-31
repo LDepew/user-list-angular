@@ -34,5 +34,4 @@ export class UserService {
     return this.http.delete(`${this.baseurl}/${user.id}`) as Observable<User>;
   }
 
-
 }
